@@ -1,0 +1,7 @@
+{
+  "name": "aula layouts",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
