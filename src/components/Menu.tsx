@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, clipboardOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, fastFoodOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, bodyOutline } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -59,10 +59,16 @@ const appPages: AppPage[] = [
     mdIcon: warningSharp
   },
   {
+    title: 'Desporto',
+    url: '/page/Desporto',
+    iosIcon: bodyOutline,
+    mdIcon: bodyOutline
+  },
+  {
     title: 'Receitas',
     url: '/Receitas',
-    iosIcon: clipboardOutline,
-    mdIcon: clipboardOutline
+    iosIcon: fastFoodOutline,
+    mdIcon: fastFoodOutline
   }
 ];
 
@@ -74,8 +80,8 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Avó Joana</IonListHeader>
-          <IonNote>As melhores receitas da avó</IonNote>
+          <IonListHeader>Inbox</IonListHeader>
+          <IonNote>hi@ionicframework.com</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -87,8 +93,6 @@ const Menu: React.FC = () => {
             );
           })}
         </IonList>
-
-        
       </IonContent>
     </IonMenu>
   );
